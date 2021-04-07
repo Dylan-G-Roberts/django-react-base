@@ -23,10 +23,11 @@ class NotesList extends Component {
     });
 
     return (
-      <div>
-        <h2>Notes</h2>
-        {items}
-      </div>
+        <div>
+            <h2>Notes</h2>
+            {items}
+            <hr />
+        </div>
     );
   }
 }
