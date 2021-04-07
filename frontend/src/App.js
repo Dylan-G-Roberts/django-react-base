@@ -8,8 +8,12 @@ import Dashboard from "./components/dashboard/Dashboard";
 import { ToastContainer } from "react-toastify";
 import axios from "axios";
 import requireAuth from "./utils/RequireAuth";
-axios.defaults.baseURL = "http://127.0.0.1:8000";
-
+// axios.defaults.baseURL = "http://127.0.0.1:8000";
+if (window.location.origin === "http://localhost:3000") {
+  axios.defaults.baseURL = "http://127.0.0.1:8000";
+} else {
+  axios.defaults.baseURL = window.location.origin;
+}
 class App extends Component {
   render() {
     return (
